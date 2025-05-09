@@ -1,0 +1,167 @@
+<!--This is for the background--!>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Community Page</title>
+ 
+    </style>
+</head>
+<body>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+  background-image: url('paper.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;  
+  background-size: cover;
+}
+</style>
+</head>
+<body>
+    <h1>Community Page</h1>
+
+<!--This is the navigation menu--!>
+<head>
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #FFEBCD;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #5F9EA0;
+}
+</style>
+</head>
+<body>
+<ul>
+        <li><a href="index.html">Homepage</a></li>
+        <li><a href="CommunityPage.html">Community</a></li>
+        <li><a href="BrowsePage.html">Browse</a></li>
+		<li><a href="About.html">About Me</a></li>
+</ul>
+
+</body>
+</html>
+	
+	<h2>Lets have a Discussion about May's Book Of The Month<h2>
+ <!DOCTYPE html>
+<html>
+<body>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/0HcMIsmKOs8?si=EYkMu6GparVh__7p" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+</body>
+</html>	
+	
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Threaded Discussion Board</title>
+</head>
+<body>
+
+  <h1>Threaded Discussion Board</h1>
+
+  <!-- Create New Thread -->
+  <form id="threadForm">
+    <label>New Thread Title:</label><br>
+    <input type="text" id="threadTitle" required>
+    <button type="submit">Create Thread</button>
+  </form>
+
+  <hr>
+
+  <!-- Threads Container -->
+  <div id="threads"></div>
+
+  <script>
+    const threadForm = document.getElementById('threadForm');
+    const threadsDiv = document.getElementById('threads');
+
+    threadForm.addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      const title = document.getElementById('threadTitle').value;
+
+      // Create thread container
+      const thread = document.createElement('div');
+      thread.style.border = "1px solid #000";
+      thread.style.margin = "10px 0";
+      thread.style.padding = "10px";
+
+      const threadHeading = document.createElement('h3');
+      threadHeading.textContent = title;
+
+      // Message form for this thread
+      const messageForm = document.createElement('form');
+      const nameInput = document.createElement('input');
+      nameInput.placeholder = "Your name";
+      nameInput.required = true;
+
+      const msgInput = document.createElement('input');
+      msgInput.placeholder = "Your message";
+      msgInput.required = true;
+
+      const postButton = document.createElement('button');
+      postButton.textContent = "Post";
+      postButton.type = "submit";
+
+      messageForm.appendChild(nameInput);
+      messageForm.appendChild(msgInput);
+      messageForm.appendChild(postButton);
+
+      const messageList = document.createElement('div');
+
+      messageForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const msg = document.createElement('p');
+        msg.innerHTML = `<strong>${nameInput.value}:</strong> ${msgInput.value}`;
+        messageList.appendChild(msg);
+        nameInput.value = '';
+        msgInput.value = '';
+      });
+
+      thread.appendChild(threadHeading);
+      thread.appendChild(messageForm);
+      thread.appendChild(messageList);
+
+      threadsDiv.appendChild(thread);
+      threadForm.reset();
+    });
+  </script>
+
+</body>
+</html>
+
+
+</body>
+</html>
+  <footer>
+    <hr>
+    <p>&copy; 2025 Book Lovers Haven</p> 
+  </footer>
+</body>
+</html>
